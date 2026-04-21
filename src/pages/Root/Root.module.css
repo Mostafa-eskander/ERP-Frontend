@@ -1,0 +1,17 @@
+.mainContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.pageContent {
+    margin-top: 70px;
+    margin-right: 260px;
+    width: calc(100% - 260px);
+    padding: 24px;
+}
+.pageAllWidth {
+    margin-top: 70px;
+    width: 100%;
+    margin-left: 0;
+    padding: 20px;
+}

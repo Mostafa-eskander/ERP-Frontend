@@ -1,0 +1,57 @@
+.form {
+    background-color: var(--surface-light);
+    padding: 32px;
+    border-radius: 20px;
+}
+.title {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 32px;
+    color: var(--primary-color);
+}
+.formData label {
+    display: block;
+    font-size: 14px;
+    color: var(--text-primary);
+}
+.formData select,
+.formData input {
+    padding: 12px 16px;
+    border: 1px solid var(--border-color);
+    background-color: var(--surface-light);
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-family: inherit;
+    font-size: 15px;
+    transition: all var(--transition-fast);
+}
+.formData input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+.storeN input {
+    margin: 10px 0 15px;
+    width: 100%;
+}
+.groupRow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.groupRow p {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.groupRow input {
+    margin: 10px 0 15px;
+}
+.curInp {
+    width: 100%;
+}
+.curInp select {
+    width: 100%;
+    margin: 10px 0 15px;
+}

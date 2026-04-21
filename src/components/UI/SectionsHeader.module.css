@@ -1,0 +1,15 @@
+.sectionHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.sectionHeader h1 {
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+.sectionHeader p {
+    color: var(--text-secondary);
+}
