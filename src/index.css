@@ -16,6 +16,8 @@
   --toggle-color: #fff;
   --white-color: #fff;
   --btn-hover: rgba(0, 0, 0, 0.05);
+  --bg-color: rgba(16, 185, 129, 0.1);
+  --bg-secondary: rgba(239, 68, 68, 0.1);
 
   --font-family: 'Inter', system-ui, -apple-system, sans-serif;
   --radius-sm: 8px;
@@ -106,4 +108,23 @@ button {
   transform: translateY(-2px);
   box-shadow: 0 6px 8px -1px rgba(79, 70, 229, 0.3);
 }
-.btn-primary:disabled { opacity: 0.7; cursor: not-allowed; }
+.btn-primary:disabled {
+  opacity: 0.7; 
+  cursor: not-allowed;
+}
+
+.inp-primary {
+  padding: 12px 16px;
+  border: 1px solid var(--border-color);
+  background-color: var(--surface-light);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 15px;
+  transition: all var(--transition-fast);
+}
+.inp-primary:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}

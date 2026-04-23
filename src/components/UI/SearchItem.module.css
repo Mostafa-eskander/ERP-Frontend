@@ -1,0 +1,11 @@
+.searchItem {
+    padding: 24px;
+    background-color: var(--surface-light);
+    border-radius: 10px;
+    margin-bottom: 16px;
+    border: 1px solid var(--border-color);
+}
+.searchItem input {
+    width: 100%;
+    max-width: 400px;
+}

@@ -15,22 +15,6 @@
     font-size: 14px;
     color: var(--text-primary);
 }
-.formData select,
-.formData input {
-    padding: 12px 16px;
-    border: 1px solid var(--border-color);
-    background-color: var(--surface-light);
-    border-radius: 8px;
-    color: var(--text-primary);
-    font-family: inherit;
-    font-size: 15px;
-    transition: all var(--transition-fast);
-}
-.formData input:focus {
-    outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
-}
 .storeN input {
     margin: 10px 0 15px;
     width: 50%;

@@ -1,0 +1,64 @@
+.badge {
+    background-color: var(--border-color);
+    color: var(--text-secondary);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+.image {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+.imageIcon {
+    position: relative;
+    left: -50%;
+    transform: translateX(50%);
+    background-color: #ccc;
+}
+.productName {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+.price {
+    color: var(--primary-color) !important;
+    font-weight: bold;
+}
+.inventory span {
+    padding: 4px 10px ;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 14px;
+}
+.inv {
+    background-color: var(--bg-color);
+    color: var(--secondary-color);
+}
+.invDanger {
+    background-color: var(--bg-secoundary);
+    color: var(--danger-color);
+}
+.actionsCell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+.edit {
+    color: var(--primary-color)
+}
+.delete {
+    color: var(--danger-color);
+}
+.delete:hover {
+    color: var(--danger-color);
+}
+
+@media (max-width: 1100px) {
+    .code {
+        font-size: 10px !important;
+    }
+}
