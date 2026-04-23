@@ -11,7 +11,14 @@
 }
 .pageAllWidth {
     margin-top: 70px;
+    margin-right: 0;
     width: 100%;
-    margin-left: 0;
-    padding: 20px;
+    padding: 24px;
+}
+
+@media (max-width: 750px) {
+    .pageContent {
+        margin-right: 0;
+        width: 100%;
+    }
 }

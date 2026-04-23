@@ -33,7 +33,7 @@
 }
 .storeN input {
     margin: 10px 0 15px;
-    width: 100%;
+    width: 50%;
 }
 .groupRow {
     display: flex;
@@ -43,15 +43,27 @@
 .groupRow p {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 25%;
 }
 .groupRow input {
     margin: 10px 0 15px;
 }
 .curInp {
-    width: 100%;
+    width: 50%;
 }
 .curInp select {
     width: 100%;
     margin: 10px 0 15px;
+}
+
+@media (max-width: 992px) {
+    .storeN input {
+        width: 100%;
+    }
+    .groupRow p {
+        width: 50%;
+    }
+    .curInp {
+        width: 100%;
+    }
 }

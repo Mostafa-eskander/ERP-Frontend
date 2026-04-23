@@ -1,29 +1,34 @@
 import { Save, Settings } from "lucide-react";
-import SectionsHeader from "../../components/UI/SectionsHeader";
+import { toast } from "react-toastify";
+import { useContext, useEffect, useState } from "react";
 
+import SectionsHeader from "../../components/UI/SectionsHeader";
 import classes from './Settings.module.css';
-import { useEffect, useState } from "react";
+import { AppContext } from "../../store/appContext";
 
 export default function SettingsPage() {
+    const { storeName, regNumber, taxRate, currency, saveData } = useContext(AppContext);
+    
+    console.log(`
+        ${storeName} : storeName
+        ${regNumber} : regNumber
+        ${taxRate} : taxRate
+        ${currency} : currency
+    `);
+
     const [formInfo,setFormInfo] = useState ({
-        storeName: '',
-        regNumber: '',
-        taxRate: 0,
-        currency: ""
+        storeName,
+        regNumber,
+        taxRate,
+        currency,
     });
 
-    useEffect(() => {
-        const storeConfig = localStorage.getItem('storeConfig');
-
-        if(storeConfig) {
-            setFormInfo(JSON.parse(storeConfig));
-        }
-    },[]);
-
+    console.log(formInfo);
+    
     function handleSave(e) {
         e.preventDefault();
-        localStorage.setItem('storeConfig',JSON.stringify(formInfo));
-        alert('تم حفظ البيانات');
+        saveData(formInfo);
+        toast.success('تم الحفظ',{position: "bottom-right",autoClose: 2000})
     }
 
     return(

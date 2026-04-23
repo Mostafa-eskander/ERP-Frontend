@@ -53,7 +53,7 @@
 }
 .navItem.active {
     background-color: var(--primary-color);
-    color: var(--surface-light);
+    color: var(--white-color);
     box-shadow: var(--shadow-sm);
 }
 

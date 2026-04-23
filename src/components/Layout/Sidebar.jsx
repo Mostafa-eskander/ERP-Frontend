@@ -2,7 +2,8 @@ import {LayoutDashboard,ShoppingCart,Package,Layers,Users,Truck,ClipboardList,Sh
 
 import classes from './Sidebar.module.css';
 import { NavLink } from 'react-router-dom';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import { AppContext } from '../../store/appContext';
 const AllRoutes = [
     {path: '/',icon: LayoutDashboard,label: "لوحة القيادة"},
     {path: '/pos',icon: ShoppingCart,label: "نقطة البيع"},
@@ -14,19 +15,16 @@ const AllRoutes = [
     {path: '/purchases',icon: ShoppingBag,label: "المشتريات"},
     {path: '/branches',icon: Package,label: "الفروع"},
     {path: '/employees',icon: LayoutDashboard,label: "الموظفين"},
-    {path: '/setting',icon: Settings,label: "الإعدادات"},
+    {path: '/settings',icon: Settings,label: "الإعدادات"},
 ]
 
 export default function Sidebar({sideBarMode,onSideBarOpen}) {
-    const storeConfig = JSON.parse(localStorage.getItem('storeConfig')) || {};
-    const [currentName, setCurrentName] = useState(storeConfig.storeName || '');
-    
-
+    const {storeName} = useContext(AppContext);
 
     return(
         <aside className={sideBarMode ? classes.sidebar : `${classes.sidebar} ${classes.sideActive}`}>
             <div className={classes.logo}>
-                <h2>ERP - {currentName}</h2>
+                <h2>ERP - {storeName}</h2>
                 <button className='btn' onClick={onSideBarOpen}><PanelRight /></button>
             </div>
             <nav className={classes.nav}>
