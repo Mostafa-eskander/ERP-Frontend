@@ -1,0 +1,78 @@
+.loginContainer {
+    width: 100%;
+}
+.formContainer {
+    margin: 100px auto 0;
+    width: 450px;
+    max-width: 500px;
+    padding: 20px;
+    background-color: var(--surface-light);
+    border-radius: 20px;
+}
+.formHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.icon {
+    width: 64px;
+    height: 64px;
+    background-color: var(--primary-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+}
+.formHeader h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 5px 0 15px;
+}
+.errorMessage {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: var(--danger-color);
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  text-align: center;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+.formHeader p {
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+.form label {
+    color: var(--text-primary);
+    font-weight: 500;
+    font-size: 14px;
+}
+.inputWrapper {
+    position: relative;
+    width: 100%;
+}
+.inputWrapper input { 
+    margin: 10px 0;
+    width: 100%;
+}
+.inputWrapper svg {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    color: var(--text-secondary);
+}
+.formBtn {
+    width: 100%;
+    margin: 20px 0 10px;
+}
+
+@media (max-width: 500px) {
+    .formContainer {
+        width: 95%;
+    }
+}

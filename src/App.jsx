@@ -5,13 +5,15 @@ import RootPage from "./pages/Root/Root";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import SettingsPage from "./pages/Settings/Settings";
 import ProductsPage from "./pages/products/Products";
+import LoginPage from "./pages/Login/Login";
 
 const router = createBrowserRouter([
   {path: '/',element: <RootPage />,children: [
     {index: true,element: <Dashboard />},
     {path: 'settings', element: <SettingsPage />},
     {path: 'products', element: <ProductsPage />},
-  ]}
+  ]},
+  {path: 'login',element: <LoginPage />}
 ])
 
 function App() {

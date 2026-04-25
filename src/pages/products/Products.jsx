@@ -1,14 +1,12 @@
 import { Edit, Package, Plus, Trash } from 'lucide-react';
-import { useContext } from 'react';
 
 import classes from './Products.module.css';
 import SectionsHeader from '../../components/UI/SectionsHeader';
 import SearchItem from '../../components/UI/SearchItem';
-import { AppContext } from '../../store/appContext';
 import TableItem from '../../components/UI/Table';
 
 export default function ProductsPage() {
-    const {products} = useContext(AppContext);
+    const products = []
     
     return (
         <div className={classes.producs}>

@@ -2,8 +2,9 @@ import {LayoutDashboard,ShoppingCart,Package,Layers,Users,Truck,ClipboardList,Sh
 
 import classes from './Sidebar.module.css';
 import { NavLink } from 'react-router-dom';
-import { useContext, useState } from 'react';
-import { AppContext } from '../../store/appContext';
+import { useEffect, useState } from 'react';
+import useAuthStore from '../../store/appContext';
+
 const AllRoutes = [
     {path: '/',icon: LayoutDashboard,label: "لوحة القيادة"},
     {path: '/pos',icon: ShoppingCart,label: "نقطة البيع"},
@@ -19,7 +20,10 @@ const AllRoutes = [
 ]
 
 export default function Sidebar({sideBarMode,onSideBarOpen}) {
-    const {storeName} = useContext(AppContext);
+    const savedConfig = JSON.parse(localStorage.getItem('storeConfig'));
+    const [storeName, setStoreName] = useState(savedConfig?.storeName || "");
+    
+    const {user} = useAuthStore();
 
     return(
         <aside className={sideBarMode ? classes.sidebar : `${classes.sidebar} ${classes.sideActive}`}>
