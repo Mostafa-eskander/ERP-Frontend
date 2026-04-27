@@ -7,7 +7,7 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 0 24px;
-    z-index: 20px;
+    z-index: 30px;
     background-color: var(--surface-light);
     border-bottom: 1px solid var(--border-color);
 }

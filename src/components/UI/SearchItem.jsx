@@ -1,9 +1,9 @@
 import classes from './SearchItem.module.css';
 
-export default function SearchItem({placeholder}) {
+export default function SearchItem({children}) {
     return(
         <div className={classes.searchItem}>
-            <input type="text" className="inp-primary" name="inpSearch" id="inpSearch" placeholder={placeholder} />
+            {children}
         </div>
     )
 }
