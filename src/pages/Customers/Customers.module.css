@@ -1,0 +1,14 @@
+.btn {
+    background-color: var(--warning-color) !important;
+}
+.custName {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.custName svg {
+    color: var(--warning-color);
+}
+.tdOverFlow {
+    overflow-x: scroll;
+}

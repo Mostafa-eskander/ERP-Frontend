@@ -6,12 +6,16 @@ import Dashboard from "./pages/Dashboard/Dashboard";
 import SettingsPage from "./pages/Settings/Settings";
 import ProductsPage from "./pages/products/Products";
 import LoginPage from "./pages/Login/Login";
+import Categories from "./pages/Categories/Categories";
+import CustomersPage from "./pages/Customers/Customers";
 
 const router = createBrowserRouter([
   {path: '/',element: <RootPage />,children: [
     {index: true,element: <Dashboard />},
     {path: 'settings', element: <SettingsPage />},
     {path: 'products', element: <ProductsPage />},
+    {path: 'categories', element: <Categories />},
+    {path: 'customers', element: <CustomersPage />}
   ]},
   {path: 'login',element: <LoginPage />}
 ])

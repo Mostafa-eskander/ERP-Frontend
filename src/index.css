@@ -138,3 +138,123 @@ button {
 }  
 .spin { animation: spin 1s linear infinite; }
 @keyframes spin { 100% { transform: rotate(360deg); } }
+
+/* table image */
+.image {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+.imageIcon {
+    position: relative;
+    left: -50%;
+    transform: translateX(50%);
+    background-color: #ccc;
+}
+.actionsCell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+/* input desgin */
+.formGroup {
+    margin-bottom: 16px;
+    padding: 16px;
+    background-color: var(--primary-light);
+    border-radius: 8px;
+}
+.formGroup label {
+    color: var(--text-secondary);
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.formGroup select {
+    width: 100%;
+}
+.formGroupInp {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.edit {
+    color: var(--primary-color)
+}
+.delete {
+    color: var(--danger-color);
+}
+.delete:hover {
+    color: var(--danger-color);
+}
+.label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: var(--primary-color);
+}
+.inpImage {
+    margin: 10px 0;
+}
+.inpImage input {
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    background-color: var(--surface-light);
+    color: var(--text-primary);
+    font-family: inherit;
+    font-size: 0.95rem;
+    transition: all var(--transition-fast);
+    width: 100%;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+.inpImage input::file-selector-button {
+  margin-inline-end: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-sm);
+  background-color: var(--primary-light);
+  color: var(--primary-color);
+  font-weight: 600;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  font-family: inherit;
+  font-size: 0.9rem;
+}
+.inpImage input::file-selector-button:hover {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    transform: translateY(-1px);
+}
+.btnForm {
+    width: 100%;
+    margin-top: 20px;
+} 
+.formGroupInp label,
+.inpImage label,
+.inpRowComp label {
+    color: var(--text-secondary);
+    font-weight: bold;
+    display: inline-block;
+    margin: 10px 0;   
+}
+.formGroupInp input,
+.formGroupInp select {
+    width: 100%;
+}
+.inpRowComp input {
+    width: 100%;
+}
+.inpRowComp textarea {
+  width: 100%;
+  resize: none;
+}
+.inpAdd label {
+    color: var(--secondary-color);
+}
+.inpAdd input:focus,
+.inpAdd input{
+    border-color: var(--secondary-color);
+}
