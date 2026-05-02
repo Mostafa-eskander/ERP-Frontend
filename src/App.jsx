@@ -13,6 +13,11 @@ import PruchasesPage from "./pages/Purchases/Purchases";
 import OrdersPage from "./pages/Orders/Orders";
 import BranchesPage from "./pages/Branches/Branches";
 import UsersPage from "./pages/Users/Users";
+import POSPage from "./pages/POS/POS";
+import CustomerPage from "./pages/Customers/Customer";
+import CustomerRoot from "./pages/Root/CustomerRoot";
+import SuppliersRoot from "./pages/Root/SuppliersRoot";
+import SupplierPage from "./pages/Suppliers/Supplier";
 
 const router = createBrowserRouter([
   {path: '/',element: <RootPage />,children: [
@@ -21,14 +26,30 @@ const router = createBrowserRouter([
     {path: 'settings', element: <SettingsPage />},
     {path: 'products', element: <ProductsPage />},
     {path: 'categories', element: <Categories />},
-    {path: 'customers', element: <CustomersPage />},
-    {path: 'suppliers', element: <SuppliersPage />},
+    {
+      path: 'customers', 
+      element: <CustomerRoot />,
+      children: [
+        {index: true, element: <CustomersPage />},
+        {path: ':customerId', element: <CustomerPage />}
+      ]
+    },
+    {
+      path: 'suppliers', 
+      element: <SuppliersRoot />,
+      children: [
+        {index: true, element: <SuppliersPage />},
+        {path: ':supplierId', element: <SupplierPage />}
+      ]
+    },
     {path: 'purchases', element: <PruchasesPage />},
     {path: 'orders', element: <OrdersPage />},
     {path: 'branches', element: <BranchesPage /> },
-    {path: 'employees', element: <UsersPage />}
+    {path: 'employees', element: <UsersPage />},
+    {path: 'pos', element: <POSPage />},
   ]},
-  {path: 'login',element: <LoginPage />}
+  {path: 'login',element: <LoginPage />},
+  { path: '*', element: <h1>Not Found</h1> }
 ])
 
 function App() {

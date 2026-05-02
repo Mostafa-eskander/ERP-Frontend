@@ -1,0 +1,54 @@
+.userInfo {
+    max-width: 400px;
+    width: fit-content;
+    padding: 20px;
+    margin: 50px auto 50px;
+    background-color: var(--surface-light);
+    border-radius: 20px;
+    color: var(--text-primary);
+}
+.userInfo h2 span {
+    color: var(--primary-color);
+}
+.userInfo p ,
+.userInfo h3 {
+    margin: 10px 0;
+    color: var(--text-secondary);
+}
+.balance {
+    color: var(--danger-color);
+}
+.notBalance {
+    color: var(--secondary-color);
+}
+.btnEdit {
+    width: fit-content;
+    padding: 8px 16px;
+    background-color: var(--primary-color);
+    border-radius: 4px;
+    color: var(--white-color);
+    margin: 20px 0 10px;
+}
+.sectionHeader {
+    font-size: 30px;
+    width: fit-content;
+    margin: 20px auto;
+    color: var(--text-primary);
+}
+.emptyOrders {
+    width: fit-content;
+    margin: 20px;
+    color: var(--text-secondary);
+    font-size: 30px;
+}
+.tranDate,
+.orderDate {
+    font-size: 12px !important;
+}
+.cash {
+    color: var(--secondary-color) !important;
+}
+.dueAmount,
+.card {
+    color: var(--danger-color) !important;
+}

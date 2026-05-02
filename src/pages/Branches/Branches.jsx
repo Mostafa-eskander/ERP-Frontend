@@ -90,7 +90,6 @@ export default function BranchesPage() {
                 </thead>
                 <tbody>
                     {branches.map((b) => {
-                        console.log(b)
                         return (
                             <tr key={b.id}>
                                 <td>{b.id}</td>

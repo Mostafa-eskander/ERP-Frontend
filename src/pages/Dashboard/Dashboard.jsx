@@ -109,7 +109,6 @@ export default function Dashboard() {
         return <div className='loadingWrapper'><Activity className="spin" size={48} color="var(--primary-color)" /></div>;
     }
 
-    
     return (
         <div className={classes.dashboard}>
             <SectionsHeader title='لوحة القيادة' description='مرحباً بك! نظرة عامة على نشاط النظام'>
@@ -117,7 +116,7 @@ export default function Dashboard() {
             </SectionsHeader>
             <div className={classes.statsGrid}>
                 {statCards.map(s => (
-                    <div className={classes.statGrid} style={{borderLeftColor : s.color}}>
+                    <div key={s.title} className={classes.statGrid} style={{borderLeftColor : s.color}}>
                         <div style={{ backgroundColor: `${s.color}20`, color: s.color }}>
                             <s.icon size={20} />
                         </div>

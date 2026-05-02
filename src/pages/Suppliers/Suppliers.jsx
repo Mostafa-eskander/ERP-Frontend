@@ -7,6 +7,7 @@ import api from '../../api/axios';
 import { toast } from 'react-toastify';
 import Modal from '../../components/UI/Modal';
 import classes from './Suppliers.module.css';
+import { Link } from 'react-router-dom';
 
 export default function SuppliersPage() {
     const [suppliers,setSuppliers] = useState([]);
@@ -14,7 +15,7 @@ export default function SuppliersPage() {
     const [submitting,setSubmitting] = useState(false);
     const [modalOpen,setModalOpen] = useState(false);
     const [search,setSearch] = useState('');
-    const [formData,setFormData] = useState({ id: null, name: '', contact_name: '', phone: '', email: '', address: '' });
+    const [formData,setFormData] = useState({ id: null, name: '', contact_name: '', phone: '', email: ''});
     const [suppliersPayments,setSuppliersPayments] = useState([]);
 
     async function fetchData() {
@@ -34,7 +35,7 @@ export default function SuppliersPage() {
 
     function handleOpenModal(item = null) {
         if(item) setFormData(item);
-        else setFormData({ id: null, name: '', contact_name: '',phone: '', email: '', address: '' });
+        else setFormData({ id: null, name: '', contact_name: '',phone: '', email: ''});
         setModalOpen(true);
     };
 
@@ -134,7 +135,9 @@ export default function SuppliersPage() {
                             <td>
                                 <div className={classes.suppName}>
                                     <CircleUser />
-                                    <span>{supplier.name}</span>
+                                    <Link to={`${supplier.id}`}>
+                                        <span>{supplier.name}</span>
+                                    </Link>
                                 </div>
                             </td>
                             <td>{supplier.phone}</td>
@@ -173,10 +176,6 @@ export default function SuppliersPage() {
                             <label htmlFor='supplierEmail'>البريد الإلكتروني</label>
                             <input type='email' className='inp-primary' value={formData.email} onChange={(e) => setFormData({...formData, email: e.target.value})}  name="supplierEmail" id="supplierEmail" />
                         </div>
-                    </div>
-                    <div className='inpRowComp'>
-                        <label htmlFor='supplierAddress'>العنوان</label>
-                        <textarea className='inp-primary' value={formData.address} onChange={(e) => setFormData({...formData, address: e.target.value})} name="supplierAddress" id="supplierAddress"></textarea>
                     </div>
                     <button className={`btn-primary ${classes.btnSubmit}`} type='submit' disabled={submitting}>
                         {submitting ? 'جاري الحفظ' : 'حفظ'}

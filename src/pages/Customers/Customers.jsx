@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react';
 import api from '../../api/axios';
 import { toast } from 'react-toastify';
 import Modal from '../../components/UI/Modal';
+import { Link } from 'react-router-dom';
 
 export default function CustomersPage() {
     const [customers,setCustomers] = useState([]);
@@ -135,7 +136,9 @@ export default function CustomersPage() {
                             <td>
                                 <div className={classes.custName}>
                                     <CircleUser />
-                                    <span>{customer.name}</span>
+                                    <Link to={`./${customer.id}`}>
+                                        <span>{customer.name}</span>
+                                    </Link>
                                 </div>
                             </td>
                             <td>{customer.phone}</td>
