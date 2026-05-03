@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom';
 import api from '../../api/axios';
 import Modal from '../../components/UI/Modal';
 import { Activity } from 'lucide-react';
+import { toast } from 'react-toastify';
 
 export default function CustomerPage() {
     const { customerId } = useParams();
