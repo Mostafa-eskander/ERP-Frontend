@@ -30,7 +30,7 @@ export default function CustomerPage() {
             );
 
             setCustomerOrders(filteredOrders);
-            setCustomerData(customerRes);
+            setCustomerData(customerRes.data);
         }catch(error) {
             console.log(error);
         }finally {

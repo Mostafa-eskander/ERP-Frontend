@@ -250,6 +250,12 @@ function POSPage() {
               </div>
             )
           })}
+
+          {filteredProducts.length === 0 && (
+            <div className={classes.emptyProducts}>
+              <h4>لا توجد منتجات</h4>
+            </div>
+          )}
         </div>
       
       </div>

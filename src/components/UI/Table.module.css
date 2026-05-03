@@ -36,3 +36,6 @@
 .tableData tbody tr:not(:last-child) {
     border-bottom: 1px solid var(--border-color);
 }
+.emptyMessage {
+    color: var(--text-secondary);
+}

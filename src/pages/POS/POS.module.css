@@ -46,6 +46,9 @@
   justify-content: center;
   gap: 20px;
 }
+.emptyProducts {
+  color: var(--text-secondary);
+}
 .product {
   max-width: 210px;
   width: 210px;
